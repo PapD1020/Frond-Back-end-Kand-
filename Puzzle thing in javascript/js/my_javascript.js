@@ -15,3 +15,12 @@ function generateNumbers(){
         }
     }
 }
+
+//Alternatív
+function generateNumbers2(){
+    for(let i = 1; i <= 16; i++){
+        console.log("i: " + i);
+        tmp = "" + i;
+        document.getElementById(tmp).innerHTML = getRandomInteger(1, 16); 
+    }
+}
