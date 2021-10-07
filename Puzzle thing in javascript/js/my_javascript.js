@@ -5,7 +5,7 @@ function getRandomInteger(min, max) {
 
 
 //eventlistener hozzáadása a mezőkhöz (td)
-function addingEL(){
+function addingEventListeners(){
     for(let i = 1; i <= 16; i++){
         tmp_i = "" + i;
         document.getElementById(tmp_i).addEventListener("click", test);
@@ -53,14 +53,29 @@ function generateNumbers4(){
 
 //vizsgáló függvény
 function test(){
-    var myArray = [];
+    /*var myArray = [];
     for (let i = 1; i <= 16; i++) {
         tmp_i2 = "i"
-        tmp_value = document.getElementById(tmp).innerHTML;
+        tmp_value = document.getElementById(tmp_i2).innerHTML;
         myArray.push(tmp_value);
+    }*/
+
+    var this_id = parseInt(this.id);
+    
+    var leftId, aboveId, rightId, underId;
+    var leftValue, aboveValue, rightValue, underValue;
+
+    if((parseInt(this_id) - 1) <= 0 || (parseInt(this_id) - 4) <= 0 || (parseInt(this_id + 1) >= 16 || (parseInt(this_id) + 1) >= 16)){
+        alert("error");
     }
-    console.log("asd1");
-    //console.log(this.id, this.innerHTML);
+    else{
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML);
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML);
+        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML);
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML);
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
+        //console.log("Alatta elem id: " + this_id + 4 + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
+    }
 }
 
 /*
