@@ -3,11 +3,22 @@ function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-//Alternatív4
+
+//eventlistener hozzáadása a mezőkhöz (td)
+function addingEL(){
+    for(let i = 1; i <= 16; i++){
+        tmp_i = "" + i;
+        document.getElementById(tmp_i).addEventListener("dblclick", function(){alert("aSD")});
+    }   
+}
+
+
+
+//Egyedi random számok kiosztása
 const numbersSet = new Set();
 const numbersSetTmp = new Set();
 function generateNumbers4(){
-    firstNumber = getRandomInteger(1, 16);
+    firstNumber = getRandomInteger(1, 15);
     document.getElementById("1").innerHTML = firstNumber;
     numbersSet.add(firstNumber);
 
@@ -15,12 +26,12 @@ function generateNumbers4(){
 
     for(let i = 2; i <= 15; i++){
         tmp = "" + i;
-        x = getRandomInteger(1, 16);
+        x = getRandomInteger(1, 15);
         numbersSetTmp.add(x);
         console.log("x: " + x);
         if(numbersSet.has(x)){
             do {
-                y = getRandomInteger(1, 16);
+                y = getRandomInteger(1, 15);
                 console.log("y: " + y);
             } while (numbersSet.has(y));
             document.getElementById(tmp).innerHTML = y;
@@ -40,6 +51,7 @@ function generateNumbers4(){
     numbersSetTmp.clear();
 }
 
+//vizsgáló függvény
 
 
 /*
