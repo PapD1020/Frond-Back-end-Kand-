@@ -8,7 +8,7 @@ function getRandomInteger(min, max) {
 function addingEL(){
     for(let i = 1; i <= 16; i++){
         tmp_i = "" + i;
-        document.getElementById(tmp_i).addEventListener("dblclick", function(){alert("aSD")});
+        document.getElementById(tmp_i).addEventListener("click", test);
     }   
 }
 
@@ -52,7 +52,16 @@ function generateNumbers4(){
 }
 
 //vizsgáló függvény
-
+function test(){
+    var myArray = [];
+    for (let i = 1; i <= 16; i++) {
+        tmp_i2 = "i"
+        tmp_value = document.getElementById(tmp).innerHTML;
+        myArray.push(tmp_value);
+    }
+    console.log("asd1");
+    //console.log(this.id, this.innerHTML);
+}
 
 /*
 //Második próba
