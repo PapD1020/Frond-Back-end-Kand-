@@ -1,43 +1,6 @@
 //Random szám generálása, min és max is beletartozik
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
-
-//Random számokkal a 4x4-es tábla egyes mezőinek feltöltése
-/*
-function generateNumbers(){
-    for(let i = 0; i < 1; i++){
-        console.log("i: " + i);
-        for(let j = 0; j < 16; j++){
-            console.log("j: " + j);
-            tmp = "" + i + j;
-            console.log("tmp: " + tmp);
-            document.getElementById(tmp).innerHTML = getRandomInteger(1, 16);
-        }
-    }
-}
-*/
-function generateNumbers2(){
-    for(let i = 1; i <= 16; i++){
-        tmp = "" + i;
-        document.getElementById(tmp).innerHTML = getRandomInteger(1, 16);
-    }
-}
-//Alternatív3
-function generateNumbers3(){
-    document.getElementById("1").innerHTML = getRandomInteger(1, 16);
-    //console.log("első szám: " + document.getElementById("1").innerHTML);
-    for(let i = 2; i <= 16; i++){
-        console.log("i: " + i);
-        tmp = "" + i;
-        do {
-            num = getRandomInteger(1, 16);
-            document.getElementById(tmp).innerHTML = num;
-            //console.log("random szám: " + num);
-        } while (document.getElementById(tmp).innerHTML == document.getElementById(tmp - 1).innerHTML);
-
-        //console.log("ami beírtásra került: " + document.getElementById(tmp).innerHTML);
-    }
 }
 
 //Alternatív4
@@ -50,7 +13,7 @@ function generateNumbers4(){
 
     console.log("első szám: " + firstNumber);
 
-    for(let i = 2; i <= 16; i++){
+    for(let i = 2; i <= 15; i++){
         tmp = "" + i;
         x = getRandomInteger(1, 16);
         numbersSetTmp.add(x);
@@ -76,3 +39,43 @@ function generateNumbers4(){
     numbersSet.clear();
     numbersSetTmp.clear();
 }
+
+
+
+/*
+//Második próba
+function generateNumbers(){
+    for(let i = 0; i < 1; i++){
+        console.log("i: " + i);
+        for(let j = 0; j < 16; j++){
+            console.log("j: " + j);
+            tmp = "" + i + j;
+            console.log("tmp: " + tmp);
+            document.getElementById(tmp).innerHTML = getRandomInteger(1, 16);
+        }
+    }
+}
+//Első próba
+function generateNumbers2(){
+    for(let i = 1; i <= 16; i++){
+        tmp = "" + i;
+        document.getElementById(tmp).innerHTML = getRandomInteger(1, 16);
+    }
+}
+//Harmadik próba
+function generateNumbers3(){
+    document.getElementById("1").innerHTML = getRandomInteger(1, 16);
+    //console.log("első szám: " + document.getElementById("1").innerHTML);
+    for(let i = 2; i <= 16; i++){
+        console.log("i: " + i);
+        tmp = "" + i;
+        do {
+            num = getRandomInteger(1, 16);
+            document.getElementById(tmp).innerHTML = num;
+            //console.log("random szám: " + num);
+        } while (document.getElementById(tmp).innerHTML == document.getElementById(tmp - 1).innerHTML);
+
+        //console.log("ami beírtásra került: " + document.getElementById(tmp).innerHTML);
+    }
+}
+*/
