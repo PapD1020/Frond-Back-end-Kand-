@@ -65,8 +65,28 @@ function test(){
     var leftId, aboveId, rightId, underId;
     var leftValue, aboveValue, rightValue, underValue;
 
-    if((parseInt(this_id) - 1) <= 0 || (parseInt(this_id) - 4) <= 0 || (parseInt(this_id + 1) >= 16 || (parseInt(this_id) + 1) >= 16)){
-        alert("error");
+    if((parseInt(this_id) - 1) <= 0){
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobb
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
+    }
+    else if((parseInt(this_id) - 4) <= 0){
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //bal
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobb
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
+    }
+    else if((parseInt(this_id) + 1) >= 16){
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //bal
+        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML); //felette
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
+    }
+    else if((parseInt(this_id) + 4) >= 16){
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //balra
+        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML); //felette
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobbra
     }
     else{
         console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML);
