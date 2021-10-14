@@ -51,26 +51,9 @@ function generateNumbers4(){
 //vizsgáló függvény
 function test(){
     var this_id = parseInt(this.id);
-    
-    var leftId, aboveId, rightId, underId;
-    var leftValue, aboveValue, rightValue, underValue;
+    var clickedValue;
 
-    var leftArray = [];
-    var rightArray = [];
-    var topArray=[];
-    var bottomArray=[];
-
-    //bal oldali elemek
-    for(let i = 1; i <= 13; i+4){
-        leftArray.add(i);
-    }
-    //jobb oldali elemek
-    for(let i = 4; i <= 16; i+4){
-        rightArray.add(i);
-    }
-    //felső oldali elemek
-    topArray.add(1, 2, 3, 4);
-    bottomArray.add(13, 14, 15, 16);
+    const topIds = [1, 2, 3, 4];
 
     if((parseInt(this_id) - 1) <= 0){ //bal felső sarok
         console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
@@ -101,6 +84,33 @@ function test(){
         console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML);
         console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
         //console.log("Alatta elem id: " + this_id + 4 + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
+    }
+
+    if(document.getElementById(parseInt(this_id) - 1).innerHTML == ""){
+        clickedValue = document.getElementById(this_id).innerHTML;
+        document.getElementById(parseInt(this_id) - 1).innerHTML = clickedValue;
+        document.getElementById(this_id).innerHTML = "";
+    }
+    else if(document.getElementById(parseInt(this_id) + 1).innerHTML == ""){
+        clickedValue = document.getElementById(this_id).innerHTML;
+        document.getElementById(parseInt(this_id) + 1).innerHTML = clickedValue;
+        document.getElementById(this_id).innerHTML = "";
+    }
+    else if(document.getElementById(parseInt(this_id) - 4).innerHTML == "" && !topIds.has(parseInt(this_id) - 4)){
+        clickedValue = document.getElementById(this_id).innerHTML;
+        document.getElementById(parseInt(this_id) - 4).innerHTML = clickedValue;
+        document.getElementById(this_id).innerHTML = "";
+    }
+    else if(document.getElementById(parseInt(this_id) + 4).innerHTML == ""){
+        clickedValue = document.getElementById(this_id).innerHTML;
+        document.getElementById(parseInt(this_id) + 4).innerHTML = clickedValue;
+        document.getElementById(this_id).innerHTML = "";
+    }
+    else if(document.getElementById(this_id).innerHTML == ""){
+        alert("Az üres mezőt nem tudod mozgatni.");
+    }
+    else{
+        alert("Rossz helyre kattintottál");
     }
 }
 
