@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+
+table{
+    border: 2px solid white;
+    color: white;
+}
+
+tr{
+    border: 2px solid white;
+}
+
+td{
+    border: 2px solid white;
+}
