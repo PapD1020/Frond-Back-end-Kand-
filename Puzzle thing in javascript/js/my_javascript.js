@@ -14,7 +14,8 @@ function addingEventListeners(){
 //Egyedi random számok kiosztása
 const numbersSet = new Set();
 const numbersSetTmp = new Set();
-function generateNumbers4(){
+function generateNumbers(){
+    document.getElementById("16").innerHTML = "";
     firstNumber = getRandomInteger(1, 15);
     document.getElementById("1").innerHTML = firstNumber;
     numbersSet.add(firstNumber);
@@ -86,22 +87,22 @@ function test(){
         //console.log("Alatta elem id: " + this_id + 4 + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
     }
 
-    if(document.getElementById(parseInt(this_id) - 1).innerHTML == ""){
+    if(parseInt(this_id) > 1 && document.getElementById(parseInt(this_id) - 1).innerHTML == "" && Math.floor(parseInt(this_id)/4) == Math.floor((parseInt(this_id) - 1) / 4)){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) - 1).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
-    else if(document.getElementById(parseInt(this_id) + 1).innerHTML == ""){
+    else if(parseInt(this_id) < 16 && document.getElementById(parseInt(this_id) + 1).innerHTML == ""){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) + 1).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
-    else if(document.getElementById(parseInt(this_id) - 4).innerHTML == "" && !topIds.has(parseInt(this_id) - 4)){
+    else if(parseInt(this_id) > 4 && document.getElementById(parseInt(this_id) - 4).innerHTML == ""){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) - 4).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
-    else if(document.getElementById(parseInt(this_id) + 4).innerHTML == ""){
+    else if(parseInt(this_id) < 13 && document.getElementById(parseInt(this_id) + 4).innerHTML == ""){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) + 4).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
