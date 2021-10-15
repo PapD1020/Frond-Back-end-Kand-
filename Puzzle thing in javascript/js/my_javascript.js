@@ -87,12 +87,12 @@ function test(){
         //console.log("Alatta elem id: " + this_id + 4 + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
     }
 
-    if(parseInt(this_id) > 1 && document.getElementById(parseInt(this_id) - 1).innerHTML == "" && Math.floor(parseInt(this_id)/4) == Math.floor((parseInt(this_id) - 1) / 4)){
+    if(parseInt(this_id) > 1 && document.getElementById(parseInt(this_id) - 1).innerHTML == "" && Math.ceil(parseInt(this_id)/4) == Math.ceil((parseInt(this_id) - 1) / 4)){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) - 1).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
-    else if(parseInt(this_id) < 16 && document.getElementById(parseInt(this_id) + 1).innerHTML == ""){
+    else if(parseInt(this_id) < 16 && document.getElementById(parseInt(this_id) + 1).innerHTML == "" && Math.ceil(parseInt(this_id)/4) == Math.ceil((parseInt(this_id) + 1) / 4)){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) + 1).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
