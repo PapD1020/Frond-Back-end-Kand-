@@ -54,54 +54,25 @@ function test(){
     var this_id = parseInt(this.id);
     var clickedValue;
 
-    const topIds = [1, 2, 3, 4];
-
-    if((parseInt(this_id) - 1) <= 0){ //bal felső sarok
-        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
-        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobb
-        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
-    }
-    else if((parseInt(this_id) - 4) <= 0){ 
-        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
-        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //bal
-        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobb
-        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
-    }
-    else if((parseInt(this_id) + 1) > 16){ //jobb alsó sarok
-        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
-        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //bal
-        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML); //felette
-    }
-    else if((parseInt(this_id) + 4) >= 16){
-        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
-        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //balra
-        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML); //felette
-        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobbra
-    }
-    else{
-        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML);
-        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML);
-        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML);
-        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML);
-        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
-        //console.log("Alatta elem id: " + this_id + 4 + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
-    }
-
+    //-1
     if(parseInt(this_id) > 1 && document.getElementById(parseInt(this_id) - 1).innerHTML == "" && Math.ceil(parseInt(this_id)/4) == Math.ceil((parseInt(this_id) - 1) / 4)){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) - 1).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
+    //+1
     else if(parseInt(this_id) < 16 && document.getElementById(parseInt(this_id) + 1).innerHTML == "" && Math.ceil(parseInt(this_id)/4) == Math.ceil((parseInt(this_id) + 1) / 4)){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) + 1).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
+    //-4
     else if(parseInt(this_id) > 4 && document.getElementById(parseInt(this_id) - 4).innerHTML == ""){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) - 4).innerHTML = clickedValue;
         document.getElementById(this_id).innerHTML = "";
     }
+    //+4
     else if(parseInt(this_id) < 13 && document.getElementById(parseInt(this_id) + 4).innerHTML == ""){
         clickedValue = document.getElementById(this_id).innerHTML;
         document.getElementById(parseInt(this_id) + 4).innerHTML = clickedValue;
@@ -113,4 +84,40 @@ function test(){
     else{
         alert("Rossz helyre kattintottál");
     }
+
+    /* Id-ék, értékek console-ra való kiíratása, működik, de nem önállóan, csak ha a fenti kód is bent van a függvényben
+    if((parseInt(this_id) - 1) <= 0){ //bal felső sarok
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobb
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
+    }
+    else if((parseInt(this_id) - 4) <= 0){ 
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //bal
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobb
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML); //alatta
+        
+    }
+    else if((parseInt(this_id) + 1) > 16){ //jobb alsó sarok
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //bal
+        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML); //felette
+        
+    }
+    else if((parseInt(this_id) + 4) >= 16){
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML); //ID
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML); //balra
+        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML); //felette
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML); //jobbra
+        
+    }
+    else{
+        console.log("Rákkattintott elem id: " + this_id + " értéke: " + this.innerHTML);
+        console.log("Balra mellette elem id: " + (this_id - 1) + " értéke: " + document.getElementById(this_id-1).innerHTML);
+        console.log("Felette elem id: " + (this_id - 4) + " értéke: " + document.getElementById(this_id-4).innerHTML);
+        console.log("Jobbra mellette elem id: " + (parseInt(this_id) + 1) + " értéke: " + document.getElementById(parseInt(this_id) + 1).innerHTML);
+        console.log("Alatta elem id: " + (parseInt(this_id) + 4) + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
+        //console.log("Alatta elem id: " + this_id + 4 + " értéke: " + document.getElementById(Number(this_id)+4).innerHTML);
+    }
+    */
 }
