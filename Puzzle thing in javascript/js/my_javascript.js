@@ -1,9 +1,11 @@
 //Random szám generálása, min és max is beletartozik
+//Random number generator, min and max are included
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
 //eventlistener hozzáadása a mezőkhöz (td)
+//Adding eventListener-s to <td>-s
 function addingEventListeners(){
     for(let i = 1; i <= 16; i++){
         tmp_i = "" + i;
@@ -12,6 +14,7 @@ function addingEventListeners(){
 }
 
 //Egyedi random számok kiosztása
+//Unique random numbers distribution into <td>-s value
 const numbersSet = new Set();
 const numbersSetTmp = new Set();
 function generateNumbers(){
@@ -50,6 +53,7 @@ function generateNumbers(){
 }
 
 //vizsgáló függvény
+//Examiner function
 function test(){
     var this_id = parseInt(this.id);
     var clickedValue;
