@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Space";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <h1 class="display-4">Space. The final frontier.</h1>
+</div>
+
+<div>
+    <p>
+        These are the voyages of the explorer <span class="font-italic" id="inputName" onclick="nameInput()">Click on me</span>.
+        Your continuing mission: to explore strange new worlds.
+    </p>
+</div>
+
+<div class="text-left">
+    <p class="display-4">What is space?</p>
+</div>
+
+<div>
+    <p>Outer space is the expanse that exists beyond Earth and between celestial bodies.
+    Outer space is not completely empty—it is a hard vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium, as well as electromagnetic radiation, magnetic fields, neutrinos, dust, and cosmic rays.
+    The baseline temperature of outer space, as set by the background radiation from the Big Bang, is 2.7 kelvins (−270.45 °C; −454.81 °F).
+    </p>
+    <p>
+        Outer space does not begin at a definite altitude above the Earth's surface.
+        The Kármán line, an altitude of 100 km (62 mi) above sea level, is conventionally used as the start of outer space in space treaties and for aerospace records keeping.
+        The framework for international space law was established by the Outer Space Treaty, which entered into force on 10 October 1967.
+        This treaty precludes any claims of national sovereignty and permits all states to freely explore outer space.
+        Despite the drafting of UN resolutions for the peaceful uses of outer space, anti-satellite weapons have been tested in Earth orbit.
+    </p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col text-left">
+            <button type="button" class="btn btn-light" onclick="window.location.href = 'https://localhost:44375/Home/Index';">Back</button>
+        </div>
+        <div class="col text-right">
+            <button type="button" class="btn btn-light" onclick="window.location.href = 'https://localhost:44375/Home/OurSolarSystem';">Go to "Our Solar System" page</button>
+        </div>
+    </div>
+</div>
+
