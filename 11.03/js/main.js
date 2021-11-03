@@ -27,6 +27,6 @@ ourButton.addEventListener("click", createNewItem);
 
 function createNewItem(){
 
-    ourList.innerHTML += "<li>" + newItemCounter + "</li>";
+    ourList.innerHTML += "<li>" + newItemCounter + " item" + "</li>";
     newItemCounter++;
 }
