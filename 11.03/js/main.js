@@ -4,12 +4,18 @@ var ourButton = document.getElementById("buttonAddNewItem");
 var ourList = document.getElementById("list");
 var newItemCounter = listItems.length + 1;
 
-for(var i = 0; i < listItems.length; i++){
+/*for(var i = 0; i < listItems.length; i++){
     listItems[i].addEventListener("click", activateItem);
-}
+}*/
 
 function activateItem(){
     ourHeader.innerText = this.innerText;
+
+    for(var i = 0; i < listItems.length; i++){
+        listItems[i].classList.remove("active");
+    }
+
+    this.classList.add("active");
 }
 
 ourButton.addEventListener("click", createNewItem);
