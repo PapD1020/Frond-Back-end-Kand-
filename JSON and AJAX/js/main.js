@@ -33,7 +33,12 @@ pets[1].species;
 */
 
 var req = new XMLHttpRequest();
-req.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
-req.onload = function(){
-    console.log(req);
-}
+var button = document.getElementById("fetchButton");
+button.addEventListener("click", function(){
+        req.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+        req.onload = function(){
+        var data = JSON.parse(req.responseText);
+        console.log(data[0]);
+    }
+    req.send();
+});
