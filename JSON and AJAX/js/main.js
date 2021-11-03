@@ -39,9 +39,19 @@ var container = document.getElementById("info");
 button.addEventListener("click", function(){
         req.open('GET', 'https://learnwebcode.github.io/json-example/animals-' + counter + '.json');
         req.onload = function(){
-        var data = JSON.parse(req.responseText);
-        readerHTML(data);
+            if(req.status >= 200 && req.status <= 400){
+                var data = JSON.parse(req.responseText);
+                readerHTML(data);
+            }
+            else{
+                console.log("connection completed, but something went wrong. Try again later!");
+            }
     }
+
+    req.onerror = function(){
+        console.log("connection error");
+    };
+
     req.send();
     counter++;
 
