@@ -7,7 +7,7 @@ var cat = {
 
 //tömb
 var colors = ["black", "grey", "green"];
-*/
+
 
 //JSON JavaScript Object Notation
 var pets = [
@@ -30,9 +30,10 @@ var pets = [
 
 //Hivatkozás JSON-ra
 pets[1].species;
+*/
 
 var req = new XMLHttpRequest();
 req.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
-req.onload = function{
+req.onload = function(){
     console.log(req);
 }
