@@ -32,10 +32,44 @@ var pets = [
 pets[1].species;
 */
 
+var counter = 1;
 var req = new XMLHttpRequest();
 var button = document.getElementById("fetchButton");
+var container = document.getElementById("info");
 button.addEventListener("click", function(){
-        req.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+        req.open('GET', 'https://learnwebcode.github.io/json-example/animals-' + counter + '.json');
+        req.onload = function(){
+        var data = JSON.parse(req.responseText);
+        readerHTML(data);
+    }
+    req.send();
+    counter++;
+
+    if(counter > 3){
+        button.classList.add("hide");
+    }
+});
+
+function readerHTML(data){
+    var sometext = "";
+
+    for(let i = 0; i < data.length; i++){
+        sometext += "<p>" + data[i].name + "is a " + data[i].species + "</p>";
+    }
+    container.insertAdjacentHTML('beforeend', sometext);
+}
+
+
+
+
+
+
+
+
+var button2 = document.getElementById("fetchButton2");
+button2.addEventListener("click", function(){
+        
+        req.open('GET', 'https://github.com/PapD1020/Frond-Back-end-Kand-/blob/master/JSON%20and%20AJAX/data.json');
         req.onload = function(){
         var data = JSON.parse(req.responseText);
         console.log(data[0]);
