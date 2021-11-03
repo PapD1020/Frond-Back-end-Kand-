@@ -54,7 +54,27 @@ function readerHTML(data){
     var sometext = "";
 
     for(let i = 0; i < data.length; i++){
-        sometext += "<p>" + data[i].name + "is a " + data[i].species + "</p>";
+        sometext += "<p>" + data[i].name + "is a " + data[i].species + " that likes to eat" + "</p>";
+
+        for (let index = 0; index < data[i].foods.likes.length; index++) {
+            if(index == 0){
+                sometext += data[i].foods.likes[index];
+            }
+            else{
+                sometext += " and " + data[i].foods.likes[index];
+            }    
+        }
+
+        sometext += " and nem szeret ";
+
+        for (let index = 0; index < data[i].foods.dislikes.length; index++) {
+            if(index == 0){
+                sometext += data[i].foods.dislikes[index];
+            }
+            else{
+                sometext += " and " + data[i].foods.dislikes[index];
+            }    
+        }
     }
     container.insertAdjacentHTML('beforeend', sometext);
 }
@@ -65,7 +85,7 @@ function readerHTML(data){
 
 
 
-
+/*
 var button2 = document.getElementById("fetchButton2");
 button2.addEventListener("click", function(){
         
@@ -76,3 +96,4 @@ button2.addEventListener("click", function(){
     }
     req.send();
 });
+*/
