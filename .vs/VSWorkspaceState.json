@@ -4,13 +4,11 @@
     "\\MvcSpaceApp",
     "\\MvcSpaceApp\\MvcSpaceApp",
     "\\MvcSpaceApp\\MvcSpaceApp\\bin",
-    "\\MvcSpaceApp\\MvcSpaceApp\\bin\\Release\\net5.0",
     "\\MvcSpaceApp\\MvcSpaceApp\\Controllers",
     "\\MvcSpaceApp\\MvcSpaceApp\\Views",
     "\\MvcSpaceApp\\MvcSpaceApp\\Views\\Home",
     "\\MvcSpaceApp\\MvcSpaceApp\\wwwroot",
     "\\MvcSpaceApp\\MvcSpaceApp\\wwwroot\\js"
   ],
-  "SelectedNode": "\\MvcSpaceApp\\MvcSpaceApp.sln",
   "PreviewInSolutionExplorer": false
 }
