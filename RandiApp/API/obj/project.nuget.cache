@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tFYqCyq7ejo3vv5nh+uTdVce2fIireSzzJZnEKnLORV06mt6Ap7JAg5Azfnxs0p9S5Lf3jjTU7ocvbIDmu0vlQ==",
+  "dgSpecHash": "goQQ5Nan3NLyNC3D6S4G0Q/YlvCdLhpno3KX6PvdZ1eHNF055UJvb2NODWmu1+xURNOZolhsisJH+mCf3Kaycw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tanulo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Tanulo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

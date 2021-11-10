@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\API\\API.csproj": {}
+    "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\API\\API.csproj": {
+    "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Tanulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\API\\obj\\",
+        "outputPath": "C:\\Users\\Tanulo\\PapD\\GIT\\Frond-Back-end-Kand-\\RandiApp\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tanulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
