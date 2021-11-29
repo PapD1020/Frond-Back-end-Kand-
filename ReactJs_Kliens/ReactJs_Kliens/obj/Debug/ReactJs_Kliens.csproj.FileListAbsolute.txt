@@ -1,0 +1,7 @@
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\bin\Debug\ReactJs_Kliens.exe.config
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\bin\Debug\ReactJs_Kliens.exe
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\bin\Debug\ReactJs_Kliens.pdb
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\obj\Debug\ReactJs_Kliens.csproj.AssemblyReference.cache
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\obj\Debug\ReactJs_Kliens.csproj.CoreCompileInputs.cache
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\obj\Debug\ReactJs_Kliens.exe
+C:\Users\Tanulo\PapD\GIT\Frond-Back-end-Kand-\ReactJs_Kliens\ReactJs_Kliens\obj\Debug\ReactJs_Kliens.pdb

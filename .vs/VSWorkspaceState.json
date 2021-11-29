@@ -1,14 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MvcSpaceApp",
     "\\MvcSpaceApp\\MvcSpaceApp",
     "\\MvcSpaceApp\\MvcSpaceApp\\bin",
     "\\MvcSpaceApp\\MvcSpaceApp\\Controllers",
     "\\MvcSpaceApp\\MvcSpaceApp\\Views",
     "\\MvcSpaceApp\\MvcSpaceApp\\Views\\Home",
     "\\MvcSpaceApp\\MvcSpaceApp\\wwwroot",
-    "\\MvcSpaceApp\\MvcSpaceApp\\wwwroot\\js"
+    "\\MvcSpaceApp\\MvcSpaceApp\\wwwroot\\js",
+    "\\ReactJS_ServerAndHost2",
+    "\\ReactJS_ServerAndHost2\\Server"
   ],
+  "SelectedNode": "\\ReactJS_ServerAndHost2\\Server\\IService1.cs",
   "PreviewInSolutionExplorer": false
 }
